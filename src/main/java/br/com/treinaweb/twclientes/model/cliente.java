@@ -15,7 +15,7 @@ public class cliente {
    
     @Id
     @GeneratedValue(strategy = GenerationType. IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
     private String nome;
@@ -26,21 +26,22 @@ public class cliente {
     @Column(nullable = false)
     private String profissao;
 
-    public cliente() {
-    }
+    
 
-    public cliente(Long id, String nome, Date datanascimento, String profissao) {
+
+    
+    public cliente(Integer id, String nome, Date datanascimento, String profissao) {
         this.id = id;
         this.nome = nome;
         this.datanascimento = datanascimento;
         this.profissao = profissao;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
